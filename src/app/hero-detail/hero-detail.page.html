@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{hero.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img
+    [src]="hero.thumbnail.path + '.' + hero.thumbnail.extension"
+    [alt]="hero.name"
+    class="hero-image">
+  </ion-img>
+
+  <ion-list>
+
+    <ion-list-header class="list-header">
+      <ion-label><strong>{{ 'label-list' | translate }}</strong></ion-label>
+    </ion-list-header>
+
+    <ion-item class="list-item">
+      <ion-label >{{ 'number-comics' | translate }}</ion-label>
+      <ion-label slot="end">{{hero.comics.returned}}</ion-label>
+    </ion-item>
+
+    <ion-item class="list-item">
+      <ion-label>{{ 'numer-series' | translate }}</ion-label>
+      <ion-label slot="end">{{hero.series.returned}}</ion-label>
+    </ion-item>
+
+    <ion-item class="list-item">
+      <ion-label>{{ 'number-stories' | translate }}</ion-label>
+      <ion-label slot="end">{{hero.stories.returned}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

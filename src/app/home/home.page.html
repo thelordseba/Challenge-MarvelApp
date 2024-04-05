@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">{{ 'title-home' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let hero of heroes" (click)="navigateToDetail(hero)">  
+
+      <ion-thumbnail>
+        <img [src]="hero.thumbnail.path + '.' + hero.thumbnail.extension" [alt]="hero.name">
+      </ion-thumbnail>
+
+      <ion-label>
+        {{hero.name}}
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
