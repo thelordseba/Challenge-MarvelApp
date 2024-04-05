@@ -1,5 +1,5 @@
-#Instalar libretias
-npm install
+# Instalar libretias
+# npm install
 
-#Ejecutar proyecto
-ionic serve
+# Ejecutar proyecto
+# ionic serve
